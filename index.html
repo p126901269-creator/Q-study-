@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Q STUDY | Smart Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <span>Q</span> STUDY
+        </div>
+
+        <nav class="nav">
+            <a href="#home">خانه</a>
+            <a href="#features">امکانات</a>
+            <a href="#advisor">برنامه‌ریز هوشمند</a>
+        </nav>
+
+        <div class="header-buttons">
+
+            <div class="support-container">
+
+                <button class="support-button" onclick="toggleSupport()">
+                    پشتیبانی
+                </button>
+
+                <div class="support-box" id="supportBox">
+                    <p>جهت ارتباط با ادمین به آیدی زیر در تلگرام پیام دهید:</p>
+
+                    <a href="https://t.me/thepouria1123" target="_blank">
+                        @thepouria1123
+                    </a>
+                </div>
+
+            </div>
+
+            <button class="language-button" onclick="changeLanguage()">
+                <span id="languageText">English</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    ✦ YOUR SMART STUDY ASSISTANT
+                </div>
+
+                <h1 data-fa="آینده تحصیلی تو، از اینجا شروع میشه!"
+                    data-en="Your Academic Future Starts Here!">
+                    آینده تحصیلی تو، از اینجا شروع میشه!
+                </h1>
+
+                <p data-fa="با Q STUDY برنامه درسی خودت رو مدیریت کن، بهتر درس بخون و به هدف‌هات نزدیک‌تر شو."
+                   data-en="Manage your study schedule, learn smarter and get closer to your goals with Q STUDY.">
+                    با Q STUDY برنامه درسی خودت رو مدیریت کن، بهتر درس بخون و به هدف‌هات نزدیک‌تر شو.
+                </p>
+
+                <a href="#advisor" class="main-button">
+                    شروع برنامه‌ریزی ←
+                </a>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="card-top">
+                    <span>Q STUDY</span>
+                    <span class="online-dot">●</span>
+                </div>
+
+                <div class="card-icon">📚</div>
+
+                <h2>Smart Planning</h2>
+
+                <p>Step by step to success</p>
+
+                <div class="progress-title">
+                    <span>Study Progress</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="features-section" id="features">
+
+            <div class="section-title">
+
+                <span>Q STUDY FEATURES</span>
+
+                <h2>امکانات Q STUDY</h2>
+
+                <p>ابزارهای مورد نیاز برای پیشرفت تحصیلی تو.</p>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>برنامه‌ریز هوشمند</h3>
+                    <p>با وارد کردن درس‌هایت، یک برنامه پیشنهادی دریافت کن.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>مدیریت زمان</h3>
+                    <p>زمان مطالعه و استراحت خودت رو بهتر مدیریت کن.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>پیشرفت تحصیلی</h3>
+                    <p>برای رسیدن به هدف‌های تحصیلی خودت برنامه داشته باش.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="advisor-section" id="advisor">
+
+            <div class="advisor-container">
+
+                <div class="section-title">
+                    <span>SMART STUDY PLANNER</span>
+
+                    <h2>برنامه درسی خودت رو بساز</h2>
+
+                    <p>
+                        درس‌هایی که باید بخونی رو وارد کن.
+                        هر درس رو در یک خط بنویس.
+                    </p>
+
+                </div>
+
+                <div class="advisor-box">
+
+                    <label for="schedule">
+                        درس‌های مورد نظرت:
+                    </label>
+
+                    <textarea
+                        id="schedule"
+                        rows="6"
+                        placeholder="مثلاً:
+ریاضی
+علوم
+زبان انگلیسی
+فارسی"
+                        spellcheck="false"
+                    ></textarea>
+
+                    <button
+                        class="analyze-button"
+                        type="button"
+                        onclick="analyzeSchedule()">
+
+                        ساخت برنامه درسی ✦
+
+                    </button>
+
+                    <div id="result" class="result-box"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">Q STUDY</div>
+
+        <p>Your Smart Study Assistant</p>
+
+        <div class="footer-line"></div>
+
+        <small>© 2026 Q STUDY - All Rights Reserved</small>
+
+        <small class="creator">
+            Created by Pouria Poorfatemi
+        </small>
+
+    </footer>
+
+</body>
+
+</html>
